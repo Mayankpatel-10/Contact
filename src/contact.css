@@ -1,0 +1,147 @@
+body {
+  background: #fbfbfd;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 32px 0 0 0;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form {
+  width: 100%;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 5px 24px rgba(0,81,167,0.07);
+  padding: 28px 18px 22px 18px;
+  margin: 0 auto 32px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  margin-bottom: 7px;
+}
+
+.field.fullwidth {
+  flex-basis: 100%;
+}
+
+label {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #222b45;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  padding: 12px 14px;
+  border: 1.2px solid #cfd8dc;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f7fafb;
+  color: #0051a7;
+  margin-bottom: 1px;
+  transition: border .17s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2282e0;
+  background: #eef6fd;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 92px;
+  font-family: inherit;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.93rem;
+  margin: 3px 0 0 2px;
+}
+
+.success-msg {
+  color: #1eb052;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 12px;
+  font-size: 1.04rem;
+}
+
+/* Button styling */
+.submit-btn {
+  margin: 18px 0 0 0;
+  width: 100%;
+  background: #0099ff;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.13rem;
+  font-weight: 600;
+  padding: 13px 0;
+  cursor: pointer;
+  transition: background 0.16s;
+}
+.submit-btn:hover {
+  background: #0051a7;
+}
+
+/* Map styling */
+.map-block {
+  width: 100%;
+  margin: 26px 0 0 0;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(0,81,167,0.09);
+  min-height: 450px;  /* Increased height */
+}
+
+.map-block iframe {
+  width: 100%;
+  height: 450px;  /* Increased height */
+  border: 0;
+  display: block;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .container, .contact-form {
+    max-width: 100vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .submit-btn {
+    padding: 13px 0;
+    font-size: 1.06rem;
+  }
+  .map-block {
+    min-height: 280px;  /* Increased mobile height */
+  }
+  .map-block iframe {
+    height: 280px;  /* Increased mobile height */
+  }
+}
